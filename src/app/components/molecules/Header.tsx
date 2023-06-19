@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Modal from "../atoms/Modal";
 import { useState } from "react";
+import Logo from "../atoms/Logo";
 
 export default function Header() {
 	const [showModal, setShowModal] = useState(false);
@@ -12,14 +13,8 @@ export default function Header() {
 
 	return (
 		<section className={`hero p-4 lg:pt-6`}>
-			{showModal && (
-				<Modal onClose={toggleModal}>
-					<h2>Modal Content</h2>
-					<p>This is the content of the modal.</p>
-				</Modal>
-			)}
 			<nav className="flex items-center justify-between bg-white/50 p-3 rounded-lg backdrop-blur-lg max-w-6xl mx-auto">
-				<h1 className="text-3xl capitalize">plants</h1>
+				<Logo />
 				<div>
 					<div
 						onClick={toggleModal}
@@ -31,6 +26,12 @@ export default function Header() {
 					</div>
 				</div>
 			</nav>
+			{showModal && (
+				<Modal onClose={toggleModal}>
+					<h2>Modal Content</h2>
+					<p>This is the content of the modal.</p>
+				</Modal>
+			)}
 		</section>
 	);
 }

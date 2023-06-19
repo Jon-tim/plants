@@ -38,7 +38,8 @@ p {
 	}
 	/* @media screen and (min-width: 1024px) {
 		.hero-bg {
-
+			background-size: contain;
+			background-position: top;
 		}
 	} */
 }

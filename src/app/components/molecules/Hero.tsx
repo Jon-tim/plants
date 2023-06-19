@@ -15,7 +15,7 @@ export default function Hero() {
 					Explore a world of botanical wonders at your fingertips.
 				</p>
 				<Link
-					href=""
+					href="/dashboard"
 					className="bg-greens rounded-lg w-max px-4 text-center py-3 cursor-pointer duration-300 transition-all hover:bg-light-green group flex"
 				>
 					<p className="text-dark-accent capitalize group-hover:text- transition-all duration-300">
